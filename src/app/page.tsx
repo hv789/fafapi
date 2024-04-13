@@ -12,7 +12,10 @@ export default function Home() {
   useEffect(() => {
     const fetchData = async () => {
       if(!input)return setSearchResults(undefined);
+
+      const res = await fetch(`/api/search?q=${input}`)
     }
+    fetchData()
   }, [input]);
 
   return (
